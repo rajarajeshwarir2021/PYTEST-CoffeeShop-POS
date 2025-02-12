@@ -35,7 +35,7 @@ pytest
 
 ## Project Structure
 ```
-CoffeePOS/
+pytest_coffeepos/
 │── src/
 │   ├── checkout.py      # Checkout system logic
 │   ├── pricing_rules.py # Pricing and discount rules
