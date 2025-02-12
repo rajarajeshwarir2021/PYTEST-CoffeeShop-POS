@@ -1,5 +1,5 @@
 x Can create an instance of POS (Point of Sale System) class
-- Can add item price
+x Can add item and price
 - Can add an item
 - Can calculate the current total price
 - Can add multiple items and calculate the correct total price

@@ -1,2 +1,4 @@
 class Checkout:
-    pass
+
+    def add_item_with_price(self, item, price):
+        pass
