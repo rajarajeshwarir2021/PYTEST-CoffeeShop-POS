@@ -6,4 +6,4 @@ x Can add multiple items and calculate the correct total price
 x Can add discount rules
 x Can apply discount rules to the total price
 x Can apply multiple discount rules to the total price
-- Can throw exception if an item without a price is added
+x Can throw exception if an item without a price is added

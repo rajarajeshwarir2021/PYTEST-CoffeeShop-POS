@@ -8,7 +8,7 @@ CoffeePOS is a simple Point of Sale (POS) system for a coffee shop, designed as 
 - Each item has a fixed price.
 - Discounts are applied based on special pricing rules:
   - **Buy 2 Cappuccinos, Get 20% off**
-  - **Buy a Croissant with any coffee and get 10% off on the Croissant**
+  - **Buy 2 Espresso, Get 10% off**
 - Computes the total price after applying discounts.
 
 ## Installation

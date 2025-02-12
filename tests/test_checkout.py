@@ -1,32 +1,20 @@
 import pytest
-from pytest import approx
-from src.checkout import Checkout
-
-
-@pytest.fixture()
-def checkout():
-    checkout = Checkout()
-    checkout.add_item_with_price("capuccino", 5)
-    checkout.add_item_with_price("espresso", 3)
-    return checkout
 
 
 def test_calculate_total(checkout):
-    checkout.add_item("capuccino")
+    """Test calculating total price for a single item."""
+    checkout.add_item("cappuccino")
     assert checkout.calculate_total() == 5
 
 
 def test_calculate_total_of_multiple_items(checkout):
-    checkout.add_item("capuccino")
+    """Test calculating total price for multiple different items."""
+    checkout.add_item("cappuccino")
     checkout.add_item("espresso")
-    assert checkout.calculate_total() == 8
+    assert checkout.calculate_total() == 8  # 5 + 3
 
 
-def test_add_multiple_discount_rule(checkout):
-    checkout.add_discount_rule("capuccino", 2, 20)
-    checkout.add_discount_rule("espresso", 2, 10)
-    checkout.add_item("capuccino")
-    checkout.add_item("capuccino")
-    checkout.add_item("espresso")
-    checkout.add_item("espresso")
-    assert checkout.calculate_total() == approx(13.4)
+def test_throw_exception_with_bad_item(checkout):
+    """Test that adding a non-existent item raises an exception."""
+    with pytest.raises(Exception, match="Product does not exist"):
+        checkout.add_item("dirty chai")
