@@ -8,9 +8,7 @@ def checkout():
     return checkout
 
 
-def test_add_item_with_price(checkout):
+def test_calculate_total(checkout):
     checkout.add_item_with_price("capuccino", 5)
-
-
-def test_add_item(checkout):
     checkout.add_item("capuccino")
+    assert checkout.calculate_total() == 1
