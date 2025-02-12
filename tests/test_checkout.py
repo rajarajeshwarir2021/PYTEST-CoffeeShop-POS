@@ -1,4 +1,5 @@
 import pytest
+from pytest import approx
 from src.checkout import Checkout
 
 
@@ -23,3 +24,7 @@ def test_calculate_total_of_multiple_items(checkout):
 
 def test_add_discount_rule(checkout):
     checkout.add_discount_rule("capuccino", 2, 20)
+    checkout.add_item("capuccino")
+    checkout.add_item("capuccino")
+    assert checkout.calculate_total() == 8
+
