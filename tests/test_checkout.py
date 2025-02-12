@@ -22,9 +22,11 @@ def test_calculate_total_of_multiple_items(checkout):
     assert checkout.calculate_total() == 8
 
 
-def test_add_discount_rule(checkout):
+def test_add_multiple_discount_rule(checkout):
     checkout.add_discount_rule("capuccino", 2, 20)
+    checkout.add_discount_rule("espresso", 2, 10)
     checkout.add_item("capuccino")
     checkout.add_item("capuccino")
-    assert checkout.calculate_total() == 8
-
+    checkout.add_item("espresso")
+    checkout.add_item("espresso")
+    assert checkout.calculate_total() == approx(13.4)
