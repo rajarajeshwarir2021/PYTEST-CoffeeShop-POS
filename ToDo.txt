@@ -1,0 +1,8 @@
+- Can create an instance of POS (Point of Sale System) class
+- Can add item price
+- Can add an item
+- Can calculate the current total price
+- Can add multiple items and calculate the correct total price
+- Can add discount rules
+- Can apply discount rules to the total price
+- Can throw exception if an item without a price is added
